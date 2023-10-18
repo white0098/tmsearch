@@ -36,4 +36,5 @@ ___
 ---
 
 ## 디자인
-
+<img width="50%" src="https://github.com/white0098/tmsearch/assets/12624550/51d80936-25a2-4c19-ad1e-4f8062a1d60e"/>
+<img width="50%" src="https://github.com/white0098/tmsearch/assets/12624550/a3f3875f-42f2-4676-b889-ec9bbb20885b"/>

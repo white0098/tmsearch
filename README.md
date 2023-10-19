@@ -23,10 +23,12 @@ ___
 
 * DB 처리
   - 라벨링 형식 : JSON or CSV
+  - 벡터 DB: npy
 * 베이스 라인 - 유사도 측정
   - 언어 : `Python 3.9`
-  - 이미지 : CNN
+  - 이미지 : Feature Extactor: VGG, ViT
   - 자연어 : TF-IDF / 코사인 유사도
+  - 라이브러리: [faiss](https://github.com/facebookresearch/faiss)
 * 학습 서버
   - Colab 및 구글 드라이브 연동
 * 성능 테스트

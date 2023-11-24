@@ -17,6 +17,14 @@ class ImageFeatureExtractor(nn.Module):
             for param in model.parameters():
                 param.requires_grad = False
             self.model = model
+
+        elif self.model_name == 'VIT_B_16':
+            # feature extractor
+            model = models.vit_b_16(weights='DEFAULT').features.to(self.device).eval()
+            for param in model.parameters():
+                param.requires_grad = False
+            self.model = model
+    
         else:
             raise NotImplementedError
         return model

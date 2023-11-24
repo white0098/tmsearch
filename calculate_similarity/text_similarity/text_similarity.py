@@ -31,7 +31,6 @@ class TextFeatureExtractor():
         similarity = 0
         for i in range(len(jaccard_similarity_list)):
             similarity += jaccard_similarity_list[i] * ngram_similarity_weight[i]
-            print(similarity)
         return similarity
 
         

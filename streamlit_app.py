@@ -39,7 +39,12 @@ with col2:
 
 
 if st.button("유사도 측정", key="유사도 측정",use_container_width=True, help="유사도 측정 버튼"):
-    result_dict = tmsearch("tmp1.jpg", "tmp2.jpg")
+
+    # add spinner
+    with st.spinner("유사도 측정 중입니다..."):
+        result_dict = tmsearch("tmp1.jpg", "tmp2.jpg")
+
+    
     st.write(result_dict)
     
     

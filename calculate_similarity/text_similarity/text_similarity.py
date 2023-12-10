@@ -1,5 +1,7 @@
 import re
 
+from calculate_similarity.pronunciation_similarity.eng2pho import convert_to_ipa, korean_to_english_pronunciation
+from calculate_similarity.pronunciation_similarity.utils import is_english_or_korean
 
 class TextFeatureExtractor:
     def _convert_to_ngram(self, text, n):
@@ -8,8 +10,22 @@ class TextFeatureExtractor:
         text = text.lower()
         text = [text[i : i + n] for i in range(len(text) - n + 1)]
         return text
+    
+    def _preprocess(self, x):
+        if is_english_or_korean(x) == "korean":
+            eng_x = korean_to_english_pronunciation(x, add_space=True)
+            print(f'KO2ENG: {x} -> {eng_x}')
+            return eng_x 
+        else:
+            return x
+        
+        
+        
 
     def calculate_similarity(self, x1, x2):
+        x1 = self._preprocess(x1)
+        x2 = self._preprocess(x2)
+
         jaccard_similarity_list = []
         if len(x1) < 3 or len(x2) < 3:
             return 0.5

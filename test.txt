@@ -1,0 +1,7 @@
+Original Image Similarity:  0.6255720853805542
+Masked Image Similarity:  0.6759887337684631
+Design Text Image Similarity:  0.6826577186584473
+Image Similarity:  0.6518939781860119
+Text Similarity:  0.011111111111111112
+Pronunciation Similarity:  0.010000000000000002
+Total Similarity:  0.26709092460773814

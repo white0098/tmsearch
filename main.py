@@ -34,6 +34,19 @@ def tmsearch(tm_path_1, tm_path_2):
     print('Text Similarity: ', text_similarity)
     print('Pronunciation Similarity: ', pronunciation_similarity)
 
+    over_threshold = [False, False, False]
+
+    for i, similarity in enumerate([img_similarity, text_similarity, pronunciation_similarity]):
+        if similarity >= config.full_score_threshold[i]:
+            over_threshold[i] = True
+            print(f'Over {config.full_score_threshold[i]} threshold')
+    
+        
+
+    
+    
+        
+    
     total_similarity = img_similarity * config.similarity_ratio[0] + text_similarity * config.similarity_ratio[1] + pronunciation_similarity * config.similarity_ratio[2]
     print('Total Similarity: ', total_similarity)
 
